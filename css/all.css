@@ -1,0 +1,372 @@
+@charset "UTF-8";
+/*【色票】*/
+/*【通用設定區】*/
+body {
+  font-family: 'Hind Vadodara', sans-serif, 微軟正黑體;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #222222;
+}
+
+.wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  max-width: 375px;
+}
+
+/*【主要資訊區（上半部區域） 】*/
+.mainInfoArea {
+  position: relative;
+  height: 330px;
+  background: linear-gradient(20deg, #19283D, #1D678F);
+  background-size: 100% 300%;
+  -webkit-animation: daylight 6s infinite;
+          animation: daylight 6s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes daylight {
+  0% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes daylight {
+  0% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/*【svg繪圖】*/
+.temperatureChart {
+  width: 100%;
+  height: 200px;
+}
+
+.temperatureChart circle {
+  fill: rgba(243, 243, 243, 0.4);
+}
+
+.temperatureChart polyline {
+  stroke: rgba(243, 243, 243, 0.4);
+  stroke-width: 1px;
+  fill: none;
+}
+
+.temperatureChart text {
+  -webkit-transform: translateY(18px);
+          transform: translateY(18px);
+  font-size: 16px;
+  fill: rgba(243, 243, 243, 0.4);
+}
+
+/*【文字訊息】*/
+.detailInfoBox {
+  position: absolute;
+  left: 27px;
+  bottom: 25px;
+  font-weight: 100px;
+  color: #f3f3f3;
+}
+
+.info_temperature {
+  font-size: 75px;
+  line-height: 80px;
+}
+
+.infos {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+/*【月亮的圖片】*/
+.moon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 130px;
+  left: 50px;
+  border-radius: 100%;
+  -webkit-box-shadow: 36px -36px #FFD633;
+          box-shadow: 36px -36px #FFD633;
+  -webkit-animation: moonMove 15s infinite linear;
+          animation: moonMove 15s infinite linear;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+}
+
+@-webkit-keyframes moonMove {
+  0% {
+    -webkit-box-shadow: 36px -36px #FFD633;
+            box-shadow: 36px -36px #FFD633;
+    -webkit-transform: translateX(-36px) translateY(36px);
+            transform: translateX(-36px) translateY(36px);
+  }
+  100% {
+    -webkit-box-shadow: -36px 36px #FFD633;
+            box-shadow: -36px 36px #FFD633;
+    -webkit-transform: translateX(36px) translateY(-36px);
+            transform: translateX(36px) translateY(-36px);
+  }
+}
+
+@keyframes moonMove {
+  0% {
+    -webkit-box-shadow: 36px -36px #FFD633;
+            box-shadow: 36px -36px #FFD633;
+    -webkit-transform: translateX(-36px) translateY(36px);
+            transform: translateX(-36px) translateY(36px);
+  }
+  100% {
+    -webkit-box-shadow: -36px 36px #FFD633;
+            box-shadow: -36px 36px #FFD633;
+    -webkit-transform: translateX(36px) translateY(-36px);
+            transform: translateX(36px) translateY(-36px);
+  }
+}
+
+/*【雲的圖片】*/
+.cloud {
+  width: 100px;
+  height: 36px;
+  position: absolute;
+  bottom: 50px;
+  left: 200px;
+  border-radius: 20px;
+  background-color: #f2f9fe;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  -webkit-animation: cloudDrift 4s infinite;
+          animation: cloudDrift 4s infinite;
+}
+
+.cloud::before, .cloud::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: #f2f9fe;
+}
+
+.cloud::before {
+  left: 16px;
+  top: -28px;
+}
+
+.cloud::after {
+  left: 35px;
+  top: -20px;
+}
+
+@-webkit-keyframes cloudDrift {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes cloudDrift {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+/*【下雨的動畫】*/
+.rain {
+  width: 1px;
+  height: 10px;
+  position: absolute;
+  -webkit-animation: rainDrop 1s infinite linear;
+          animation: rainDrop 1s infinite linear;
+  background-color: #f2f9fe;
+}
+
+.rain1 {
+  bottom: 20px;
+  left: 30px;
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+
+.rain2 {
+  bottom: 15px;
+  left: 45px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.rain3 {
+  bottom: 20px;
+  left: 70px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+@-webkit-keyframes rainDrop {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes rainDrop {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+/*【一週天氣資訊區】*/
+.weekInfoArea {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.weekInfoList {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weekInfoList li {
+  display: inline-block;
+  width: calc(100% / 7 - 5px);
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.weekInfoTitle {
+  color: rgba(34, 34, 34, 0.6);
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+/*【繪製天氣圖示】*/
+.weekInfoList svg {
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+}
+
+.sunIcon {
+  fill: #FFD633;
+  stroke: rgba(255, 214, 51, 0.5);
+  stroke-width: 30px;
+  stroke-dasharray: 5px;
+  -webkit-animation: sunRotate 10s infinite linear;
+          animation: sunRotate 10s infinite linear;
+}
+
+@-webkit-keyframes sunRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes sunRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.cloudIcon {
+  fill: #cccccc;
+  stroke: none;
+  -webkit-animation: cloudDrift 4s infinite;
+          animation: cloudDrift 4s infinite;
+}
+
+.rainIcon {
+  stroke: #4DACFF;
+  stroke-width: 5px;
+  -webkit-animation: rainDrop 1s infinite linear;
+          animation: rainDrop 1s infinite linear;
+}
+
+.rainIcon1 {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+
+.rainIcon2 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.rainIcon3 {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+/*# sourceMappingURL=all.css.map */
