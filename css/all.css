@@ -345,9 +345,10 @@ body {
 
 /*【一週天氣資訊區】*/
 .weekInfoArea {
+  position: relative;
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  height: 10px;
+  height: 20px;
   overflow: hidden;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
@@ -355,6 +356,81 @@ body {
 
 .wrap:hover .weekInfoArea {
   height: 90px;
+}
+
+.downArrow {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0;
+  width: 20px;
+  height: 15px;
+  -webkit-animation: downArrowFlicker 2s infinite linear;
+          animation: downArrowFlicker 2s infinite linear;
+}
+
+.downArrow::after {
+  display: inline-block;
+  content: "";
+  height: 9px;
+  width: 9px;
+  border-width: 0 2px 2px 0;
+  border-color: #222222;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -5px;
+}
+
+.downArrow.active::after {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+@-webkit-keyframes downArrowFlicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes downArrowFlicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrap:hover .downArrow {
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+  opacity: 0;
 }
 
 .weekInfoList {

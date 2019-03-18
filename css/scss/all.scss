@@ -307,8 +307,9 @@ body
 
 .weekInfoArea
 {
+    position: relative;
     box-shadow: 0px 0px 20px rgba(Black, 0.3);    
-    height: 10px;
+    height: 20px;
     overflow: hidden;
     transition-duration: 1s;
 }
@@ -317,6 +318,56 @@ body
 {
     height: 90px;
 }
+
+.downArrow
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 20px;
+    height: 15px;
+    animation: downArrowFlicker 2s infinite linear;
+}
+
+.downArrow::after
+{
+    display: inline-block;
+    content:"";
+    height: 9px;
+    width: 9px;
+    border-width: 0 2px 2px 0;
+    border-color: $color_Black;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform-origin: center;
+    transition: transform .3s;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -5px;
+}
+
+.downArrow.active::after
+{
+    transform-origin: center;
+    transform: rotate(-135deg);
+    transition: transform .3s;
+}
+
+@keyframes downArrowFlicker
+{
+    0% {opacity: 1;}
+    50% {opacity: 0.1;}
+    100% {opacity: 1;}
+}
+
+.wrap:hover .downArrow
+{
+    animation-duration: 0s;
+    opacity: 0;
+}
+
 
 .weekInfoList
 {
