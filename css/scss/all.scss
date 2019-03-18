@@ -23,12 +23,11 @@ $color_Cloud_Grey: #cccccc;
 
 
 /*【通用設定區】*/
-
-body
+body, html
 {
     font-family:  'Hind Vadodara', sans-serif, 微軟正黑體;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
