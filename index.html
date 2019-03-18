@@ -35,112 +35,114 @@
 </head>
 <body> 
 	<div class="wrap">
-		
-		<div class="mainInfoArea">
-			<svg class="temperatureChart">
-				<text x="0" y="100">26°</text>
-				<circle cx="0" cy="100" r="3"></circle>
+		<label>
+			<input id="switch_Light" type="checkbox">
+			<div class="mainInfoArea">
+				<svg class="temperatureChart">
+					<text x="0" y="100">26°</text>
+					<circle cx="0" cy="100" r="3"></circle>
 
-				<text x="65" y="80">27°</text>
-				<circle cx="65" cy="80" r="3"></circle>
+					<text x="65" y="80">27°</text>
+					<circle cx="65" cy="80" r="3"></circle>
 
-				<text x="130" y="60">28°</text>
-				<circle cx="130" cy="60" r="3"></circle>
+					<text x="130" y="60">28°</text>
+					<circle cx="130" cy="60" r="3"></circle>
 
-				<text x="195" y="64">27.8°</text>
-				<circle cx="195" cy="64" r="3"></circle>
+					<text x="195" y="64">27.8°</text>
+					<circle cx="195" cy="64" r="3"></circle>
 
-				<text x="260" y="94">26.3°</text>
-				<circle cx="260" cy="94" r="3"></circle>
+					<text x="260" y="94">26.3°</text>
+					<circle cx="260" cy="94" r="3"></circle>
 
-				<text x="325" y="104">25.8°</text>
-				<circle cx="325" cy="104" r="3"></circle>
-				
-				<text x="390" y="60">27°</text>
-				<circle cx="390" cy="60" r="3"></circle>
+					<text x="325" y="104">25.8°</text>
+					<circle cx="325" cy="104" r="3"></circle>
+					
+					<text x="390" y="60">27°</text>
+					<circle cx="390" cy="60" r="3"></circle>
 
-				<polyline points="0,100 65,80 130,60 195,64 260,94 325,104 390,60"></polyline>
-			</svg>
-			<ul class="detailInfoBox">
-				<li class="info_temperature">23℃</li>
-				<li class="infos info_location">台北市萬華區</li>
-				<li class="infos info_time">星期五 下午11:00</li>
-			</ul>
-			<div class="moon"></div>
-			<div class="cloud">
-				<div class="rain rain1"></div>
-				<div class="rain rain2"></div>
-				<div class="rain rain3"></div>
+					<polyline points="0,100 65,80 130,60 195,64 260,94 325,104 390,60"></polyline>
+				</svg>
+				<ul class="detailInfoBox">
+					<li class="info_temperature">26℃</li>
+					<li class="infos info_location">台北市萬華區</li>
+					<li class="infos info_time">星期五 下午11:00</li>
+				</ul>
+				<div class="moon"></div>
+				<div class="cloud">
+					<div class="rain rain1"></div>
+					<div class="rain rain2"></div>
+					<div class="rain rain3"></div>
+				</div>
 			</div>
-		</div>
 
-		<div class="weekInfoArea">
-			<ul class="weekInfoList">
-				<li class="mondayInfo">
-					<h3 class="weekInfoTitle">MON</h3>
-					<svg class="weaterIcon" viewbox="-50 -50 100 100">
-						<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
-					</svg>
-				</li>
-				<li class="tuesdayInfo">
-					<h3 class="weekInfoTitle">TUE</h3>
-					<svg class="weaterIcon" viewbox="-50 -50 100 100">
-						<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
-					</svg>
-				</li>
-				<li class="wednesdayInfo">
-					<h3 class="weekInfoTitle">WED</h3>
-					<svg class="weaterIcon" viewbox="-50 -50 100 100">
-						<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
-						<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
-						<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
-					</svg>
-				</li>
-				<li class="thursdayInfo">
-					<h3 class="weekInfoTitle">THU</h3>
-					<svg class="weaterIcon" viewbox="-50 -50 100 100">
-						<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
-						<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
-						<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
-					</svg>
-				</li>
-				<li class="fridayInfo">
-					<h3 class="weekInfoTitle">FRI</h3>
-					<svg class="weaterIcon" viewbox="-65 -35 100 100">
-						<line class="rainIcon rainIcon1" x1="-32" y1="13" x2="-32" y2="33"></line>
-						<line class="rainIcon rainIcon2" x1="-20" y1="9" x2="-20" y2="29"></line>
-						<line class="rainIcon rainIcon3" x1="-5" y1="18" x2="-5" y2="38"></line>
-						<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
-						<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
-					</svg>
-				</li>
-				<li class="saturdayInfo">
-					<h3 class="weekInfoTitle">SAT</h3>
-					<svg class="weaterIcon" viewbox="-50 -50 100 100">
-						<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
-					</svg>
-				</li>
-				<li class="sundayInfo">
-					<h3 class="weekInfoTitle">SUN</h3>
-					<svg class="weaterIcon" viewbox="-65 -35 100 100">
-						<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
-						<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
-						<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
-					</svg>
-				</li>
-			</ul>
-		</div>
+			<div class="weekInfoArea">
+				<ul class="weekInfoList">
+					<li class="mondayInfo">
+						<h3 class="weekInfoTitle">MON</h3>
+						<svg class="weaterIcon" viewbox="-50 -50 100 100">
+							<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
+						</svg>
+					</li>
+					<li class="tuesdayInfo">
+						<h3 class="weekInfoTitle">TUE</h3>
+						<svg class="weaterIcon" viewbox="-50 -50 100 100">
+							<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
+						</svg>
+					</li>
+					<li class="wednesdayInfo">
+						<h3 class="weekInfoTitle">WED</h3>
+						<svg class="weaterIcon" viewbox="-50 -50 100 100">
+							<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
+							<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
+							<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
+						</svg>
+					</li>
+					<li class="thursdayInfo">
+						<h3 class="weekInfoTitle">THU</h3>
+						<svg class="weaterIcon" viewbox="-50 -50 100 100">
+							<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
+							<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
+							<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
+						</svg>
+					</li>
+					<li class="fridayInfo">
+						<h3 class="weekInfoTitle">FRI</h3>
+						<svg class="weaterIcon" viewbox="-65 -35 100 100">
+							<line class="rainIcon rainIcon1" x1="-32" y1="13" x2="-32" y2="33"></line>
+							<line class="rainIcon rainIcon2" x1="-20" y1="9" x2="-20" y2="29"></line>
+							<line class="rainIcon rainIcon3" x1="-5" y1="18" x2="-5" y2="38"></line>
+							<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
+							<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
+						</svg>
+					</li>
+					<li class="saturdayInfo">
+						<h3 class="weekInfoTitle">SAT</h3>
+						<svg class="weaterIcon" viewbox="-50 -50 100 100">
+							<circle class="sunIcon" cx="0" cy="0" r="22"></circle>
+						</svg>
+					</li>
+					<li class="sundayInfo">
+						<h3 class="weekInfoTitle">SUN</h3>
+						<svg class="weaterIcon" viewbox="-65 -35 100 100">
+							<circle class="cloudIcon" cx="0" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-16" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-32" cy="30" r="16"></circle>
+							<circle class="cloudIcon" cx="-23" cy="13" r="12"></circle>
+							<circle class="cloudIcon" cx="-6" cy="17" r="12"></circle>
+						</svg>
+					</li>
+				</ul>
+			</div>
+		</label>
 	</div>
 
 </body>
